@@ -2,12 +2,77 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SpaceXhistory.Views.PastLaunchesPage"
-             Title="PastLaunchesPage">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
 
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ListView ItemsSource="{Binding LatestLaunchs}"
+              BackgroundColor="Black"
+              HasUnevenRows="True"
+              SeparatorVisibility="None">
+        <ListView.Header>
+            <Image Margin="20"
+                   WidthRequest="150"
+                   HeightRequest="40"
+                   Source="logo.png"/>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid RowDefinitions="auto"
+                          ColumnDefinitions="auto, auto"
+                          Margin="0,20,0,0">
+                        <Image Grid.Row="0"
+                               Grid.Column="0"
+                               HeightRequest="120"
+                               WidthRequest="120"
+                               Source="{Binding links.patch.small, TargetNullValue='https://i.imgur.com/8pgWyf4.png'}"/>
+                        <Grid Grid.Row="0"
+                              Grid.Column="1"
+                              RowDefinitions="auto, auto, auto, auto"
+                              ColumnDefinitions="auto"
+                              VerticalOptions="Center"
+                              Margin="20,0,0,0">
+                            <Label Grid.Row="0"
+                                   Grid.Column="0"
+                                   FontSize="30"
+                                   FontFamily="Bold"
+                                   TextColor="White"
+                                   Margin="0,0,0,10"
+                                   Text="{Binding name}"/>
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Text="{Binding date_local, StringFormat='{0:ddd, dd MMM yyyy}', TargetNullValue='not informed', FallbackValue='not informed'}"
+                                   FontFamily="Medium"
+                                   Margin="0,0,0,5"
+                                   TextColor="White"/>
+                            <Label Grid.Row="2"
+                                   Grid.Column="0"
+                                   Text="upcoming"
+                                   FontFamily="Medium"
+                                   Margin="0,0,0,10"
+                                   TextColor="DeepSkyBlue"/>
+                            <Frame Grid.Row="3"
+                                   Grid.Column="0"
+                                   HorizontalOptions="Start"
+                                   BackgroundColor="Transparent"
+                                   Padding="6,10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="youtube"
+                                           WidthRequest="20"
+                                           HeightRequest="10"/>
+                                    <Label Text="Watch the launch"
+                                           Margin="6,0,0,0"
+                                           FontFamily="Light"
+                                           FontSize="12"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           TextColor="White"/>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
