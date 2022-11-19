@@ -19,6 +19,6 @@ public partial class HomePage : ContentPage
 		base.OnAppearing();
 
 		_viewModel.GetNextLaunch();
-		_viewModel.GetLastedLaunch();
+		_viewModel.GetLatestLaunch();
 	}
 }

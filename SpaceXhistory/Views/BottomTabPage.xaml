@@ -8,17 +8,17 @@
 
     <NavigationPage Title="Home">
         <x:Arguments>
-            <local:HomePage Title="Home" />
+            <local:HomePage/>
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Upcoming">
+    <NavigationPage Title="next launchs">
         <x:Arguments>
-            <local:UpcomingLaunchesPage Title="Upcoming"/>
+            <local:UpcomingLaunchesPage/>
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Released">
+    <NavigationPage Title="latest launchs">
         <x:Arguments>
-            <local:PastLaunchesPage Title="Released"/>
+            <local:PastLaunchesPage/>
         </x:Arguments>
     </NavigationPage>
 </TabbedPage>

@@ -7,10 +7,21 @@ namespace SpaceXhistory.ViewModels
 {
 	public class HomePageViewModel : BaseViewModel
 	{
-		public Root NextLaunch { get; set; }
-		public Root LastedLaunch { get; set; }
+		public Root NextLaunch
+		{
+			get => _nextLaunch;
+			set => SetProperty(ref _nextLaunch, value);
+		}
+
+		public Root LatestLaunch
+		{
+			get => _latestLaunch;
+			set => SetProperty(ref _latestLaunch, value);
+		}
 
         private readonly HttpClient _client;
+		private Root _nextLaunch;
+		private Root _latestLaunch;
 
 		public HomePageViewModel()
 		{
@@ -23,10 +34,10 @@ namespace SpaceXhistory.ViewModels
             NextLaunch = JsonConvert.DeserializeObject<Root>(nextLaunchSerialized);
         }
 
-		public void GetLastedLaunch()
+		public void GetLatestLaunch()
 		{
             var lastedLaunchSerialized = _client.GetStringAsync(Constants.BaseUrl + "latest").Result;
-            LastedLaunch = JsonConvert.DeserializeObject<Root>(lastedLaunchSerialized);
+            LatestLaunch = JsonConvert.DeserializeObject<Root>(lastedLaunchSerialized);
         }
 	}
 }

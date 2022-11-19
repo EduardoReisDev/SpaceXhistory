@@ -2,12 +2,66 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SpaceXhistory.Views.HomePage"
-             Title="HomePage">
+             NavigationPage.HasNavigationBar="False">
 
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid RowDefinitions="auto, auto, auto, auto"
+          ColumnDefinitions="auto"
+          Margin="20">
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               Text="Next launch"/>
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              RowDefinitions="auto"
+              ColumnDefinitions="auto, auto, *">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="DATA"/>
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   Text="PATCH"/>
+            <Grid Grid.Row="0"
+                  Grid.Column="2"
+                  RowDefinitions="auto, auto, auto"
+                  ColumnDefinitions="auto">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="{Binding NextLaunch.name}"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Dexember"/>
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="upcoming"/>
+            </Grid>
+        </Grid>
+        <Label Grid.Row="2"
+               Grid.Column="0"
+               Text="Latest launch"/>
+        <Grid Grid.Row="3"
+              Grid.Column="0"
+              RowDefinitions="auto"
+              ColumnDefinitions="auto, auto, *">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="DATA"/>
+            <Label Grid.Row="0"
+                   Grid.Column="1"
+                   Text="PATCH"/>
+            <Grid Grid.Row="0"
+                  Grid.Column="2"
+                  RowDefinitions="auto, auto, auto"
+                  ColumnDefinitions="auto">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="{Binding LatestLaunch.name}"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Dexember"/>
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="upcoming"/>
+            </Grid>
+        </Grid>
+    </Grid>
 </ContentPage>
