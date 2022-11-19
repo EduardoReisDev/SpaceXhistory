@@ -75,6 +75,8 @@
 	  <None Remove="Resources\Images\base.svg" />
 	  <None Remove="Resources\Images\cap.svg" />
 	  <None Remove="Resources\Images\ship.svg" />
+	  <None Remove="Resources\Images\wiki.svg" />
+	  <None Remove="Resources\Images\youtube.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
@@ -108,5 +110,7 @@
 	  <BundleResource Include="Resources\Images\base.svg" />
 	  <BundleResource Include="Resources\Images\cap.svg" />
 	  <BundleResource Include="Resources\Images\ship.svg" />
+	  <BundleResource Include="Resources\Images\wiki.svg" />
+	  <BundleResource Include="Resources\Images\youtube.svg" />
 	</ItemGroup>
 </Project>

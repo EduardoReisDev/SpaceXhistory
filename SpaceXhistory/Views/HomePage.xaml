@@ -4,7 +4,8 @@
              x:Class="SpaceXhistory.Views.HomePage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="Black">
-    <ScrollView>
+
+    <ScrollView Orientation="Vertical">
         <Grid RowDefinitions="auto, auto, auto, auto, auto, auto, auto"
               ColumnDefinitions="auto"
               Margin="20">
@@ -24,7 +25,7 @@
             <Grid Grid.Row="2"
                   Grid.Column="0"
                   RowDefinitions="auto"
-                  ColumnDefinitions="auto, *">
+                  ColumnDefinitions="auto, auto">
                 <Image Grid.Row="0"
                        Grid.Column="0"
                        HeightRequest="120"
@@ -59,14 +60,22 @@
                            Grid.Column="0"
                            HorizontalOptions="Start"
                            BackgroundColor="Transparent"
-                           WidthRequest="100"
                            Padding="6,10">
-                        <Label Text="Watch the launch"
-                               FontFamily="Light"
-                               FontSize="12"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               TextColor="White"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="youtube"
+                                   WidthRequest="20"
+                                   HeightRequest="10"/>
+                            <Label Text="Watch the launch"
+                                   Margin="6,0,0,0"
+                                   FontFamily="Light"
+                                   FontSize="12"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="NextLaunchWebcastTap"/>
+                        </Frame.GestureRecognizers>
                     </Frame>
                 </Grid>
             </Grid>
@@ -79,7 +88,7 @@
             <Grid Grid.Row="4"
                   Grid.Column="0"
                   RowDefinitions="auto"
-                  ColumnDefinitions="auto, *">
+                  ColumnDefinitions="auto, auto">
                 <Image Grid.Row="0"
                        Grid.Column="0"
                        WidthRequest="120"
@@ -113,14 +122,22 @@
                            Grid.Column="0"
                            HorizontalOptions="Start"
                            BackgroundColor="Transparent"
-                           WidthRequest="100"
                            Padding="6,10">
-                        <Label Text="Watch the launch"
-                               FontFamily="Light"
-                               FontSize="12"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               TextColor="White"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="youtube"
+                                   WidthRequest="20"
+                                   HeightRequest="10"/>
+                            <Label Text="Watch the launch"
+                                   Margin="6,0,0,0"
+                                   FontFamily="Light"
+                                   FontSize="12"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LatestLaunchWebcastTap"/>
+                        </Frame.GestureRecognizers>
                     </Frame>
                 </Grid>
             </Grid>
@@ -128,8 +145,105 @@
                    Grid.Column="0"
                    FontFamily="Light"
                    TextColor="#adb5bd"
-                   Margin="0,30,0,20"
+                   Margin="0,30,0,10"
                    Text="Tesla Roadster status"/>
+            <Grid Grid.Row="6"
+                  Grid.Column="0"
+                  RowDefinitions="auto"
+                  ColumnDefinitions="auto, auto">
+                <Image Grid.Row="0"
+                       Grid.Column="0"
+                       WidthRequest="120"
+                       HeightRequest="120"
+                       Source="https://farm5.staticflickr.com/4615/40143096241_11128929df_b.jpg"/>
+                <Grid Grid.Row="0"
+                      Grid.Column="1"
+                      RowDefinitions="auto, auto, auto, auto, auto, auto, auto, auto"
+                      VerticalOptions="Center"
+                      Margin="20,0,0,0">
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Text="Earth distance (km)"
+                           FontFamily="Medium"
+                           FontSize="10"
+                           TextColor="White"/>
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           FontFamily="Medium"
+                           FontSize="16"
+                           TextColor="White"
+                           Text="{Binding RoadsterInfo.earth_distance_km, StringFormat='{0:0}'}"/>
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           Margin="0,10,0,0"
+                           FontFamily="Medium"
+                           FontSize="10"
+                           TextColor="White"
+                           Text="Mars distance (km)"/>
+                    <Label Grid.Row="3"
+                           Grid.Column="0"
+                           FontFamily="Medium"
+                           FontSize="16"
+                           TextColor="White"
+                           Text="{Binding RoadsterInfo.mars_distance_km, StringFormat='{0:0}'}"/>
+                    <Label Grid.Row="4"
+                           Grid.Column="0"
+                           FontFamily="Medium"
+                           FontSize="10"
+                           TextColor="White"
+                           Margin="0,10,0,0"
+                           Text="Speed (km/h)"/>
+                    <Label Grid.Row="5"
+                           Grid.Column="0"
+                           FontFamily="Medium"
+                           FontSize="16"
+                           TextColor="White"
+                           Text="{Binding RoadsterInfo.speed_kph, StringFormat='{0:0}'}"/>
+                    <Frame Grid.Row="6"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           BackgroundColor="Transparent"
+                           Padding="6,10"
+                           Margin="0,10,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="youtube"
+                                   WidthRequest="20"
+                                   HeightRequest="10"/>
+                            <Label Text="Watch the launch"
+                                   Margin="6,0,0,0"
+                                   FontFamily="Light"
+                                   FontSize="12"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RoadsterWebcastTap"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Row="7"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           BackgroundColor="Transparent"
+                           Padding="6,10"
+                           Margin="0,10,0,0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="wiki"
+                                   WidthRequest="16"/>
+                            <Label Text="Click for more information"
+                                   Margin="6,0,0,0"
+                                   FontFamily="Light"
+                                   FontSize="12"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RoadsterWikiTap"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+            </Grid>
         </Grid>
     </ScrollView>
 </ContentPage>
