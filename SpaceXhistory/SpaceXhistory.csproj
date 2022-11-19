@@ -44,6 +44,10 @@
 		<MauiImage Include="Resources\Images\*" />
 		<MauiFont Include="Resources\Fonts\*" />
 
+		<MauiImage Update="Resources\Images\base.svg" BaseSize="30,30" />
+		<MauiImage Update="Resources\Images\cap.svg" BaseSize="24,24" />
+		<MauiImage Update="Resources\Images\ship.svg" BaseSize="30,30" />
+
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
@@ -60,6 +64,17 @@
 	  <None Remove="Resources\Images\botao-de-inicio.png" />
 	  <None Remove="ViewModels\" />
 	  <None Remove="Helpers\" />
+	  <None Remove="Resources\Fonts\GemunuLibre-Bold.ttf" />
+	  <None Remove="Resources\Fonts\GemunuLibre-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\GemunuLibre-ExtraLight.ttf" />
+	  <None Remove="Resources\Fonts\GemunuLibre-Light.ttf" />
+	  <None Remove="Resources\Fonts\GemunuLibre-Medium.ttf" />
+	  <None Remove="Resources\Fonts\GemunuLibre-Regular.ttf" />
+	  <None Remove="Resources\Fonts\GemunuLibre-SemiBold.ttf" />
+	  <None Remove="Resources\Images\logo.png" />
+	  <None Remove="Resources\Images\base.svg" />
+	  <None Remove="Resources\Images\cap.svg" />
+	  <None Remove="Resources\Images\ship.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
@@ -80,5 +95,18 @@
 	  <MauiXaml Update="Views\BottomTabPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Fonts\GemunuLibre-Bold.ttf" />
+	  <BundleResource Include="Resources\Fonts\GemunuLibre-ExtraBold.ttf" />
+	  <BundleResource Include="Resources\Fonts\GemunuLibre-ExtraLight.ttf" />
+	  <BundleResource Include="Resources\Fonts\GemunuLibre-Light.ttf" />
+	  <BundleResource Include="Resources\Fonts\GemunuLibre-Medium.ttf" />
+	  <BundleResource Include="Resources\Fonts\GemunuLibre-Regular.ttf" />
+	  <BundleResource Include="Resources\Fonts\GemunuLibre-SemiBold.ttf" />
+	  <BundleResource Include="Resources\Images\logo.png" />
+	  <BundleResource Include="Resources\Images\base.svg" />
+	  <BundleResource Include="Resources\Images\cap.svg" />
+	  <BundleResource Include="Resources\Images\ship.svg" />
 	</ItemGroup>
 </Project>

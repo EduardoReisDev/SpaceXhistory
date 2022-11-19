@@ -2,66 +2,134 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SpaceXhistory.Views.HomePage"
-             NavigationPage.HasNavigationBar="False">
-
-    <Grid RowDefinitions="auto, auto, auto, auto"
-          ColumnDefinitions="auto"
-          Margin="20">
-        <Label Grid.Row="0"
-               Grid.Column="0"
-               Text="Next launch"/>
-        <Grid Grid.Row="1"
-              Grid.Column="0"
-              RowDefinitions="auto"
-              ColumnDefinitions="auto, auto, *">
-            <Label Grid.Row="0"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+    <ScrollView>
+        <Grid RowDefinitions="auto, auto, auto, auto, auto, auto, auto"
+              ColumnDefinitions="auto"
+              Margin="20">
+            <Image Grid.Row="0"
                    Grid.Column="0"
-                   Text="DATA"/>
-            <Label Grid.Row="0"
-                   Grid.Column="1"
-                   Text="PATCH"/>
-            <Grid Grid.Row="0"
-                  Grid.Column="2"
-                  RowDefinitions="auto, auto, auto"
-                  ColumnDefinitions="auto">
-                <Label Grid.Row="0"
-                       Grid.Column="0"
-                       Text="{Binding NextLaunch.name}"/>
-                <Label Grid.Row="1"
-                       Grid.Column="0"
-                       Text="Dexember"/>
-                <Label Grid.Row="2"
-                       Grid.Column="0"
-                       Text="upcoming"/>
-            </Grid>
-        </Grid>
-        <Label Grid.Row="2"
-               Grid.Column="0"
-               Text="Latest launch"/>
-        <Grid Grid.Row="3"
-              Grid.Column="0"
-              RowDefinitions="auto"
-              ColumnDefinitions="auto, auto, *">
-            <Label Grid.Row="0"
+                   Margin="0"
+                   WidthRequest="150"
+                   HeightRequest="40"
+                   HorizontalOptions="Start"
+                   Source="logo.png"/>
+            <Label Grid.Row="1"
                    Grid.Column="0"
-                   Text="DATA"/>
-            <Label Grid.Row="0"
-                   Grid.Column="1"
-                   Text="PATCH"/>
-            <Grid Grid.Row="0"
-                  Grid.Column="2"
-                  RowDefinitions="auto, auto, auto"
-                  ColumnDefinitions="auto">
-                <Label Grid.Row="0"
+                   Margin="0,25,0,20"
+                   Text="next launch"
+                   FontFamily="Light"
+                   TextColor="#adb5bd"/>
+            <Grid Grid.Row="2"
+                  Grid.Column="0"
+                  RowDefinitions="auto"
+                  ColumnDefinitions="auto, *">
+                <Image Grid.Row="0"
                        Grid.Column="0"
-                       Text="{Binding LatestLaunch.name}"/>
-                <Label Grid.Row="1"
-                       Grid.Column="0"
-                       Text="Dexember"/>
-                <Label Grid.Row="2"
-                       Grid.Column="0"
-                       Text="upcoming"/>
+                       HeightRequest="120"
+                       WidthRequest="120"
+                       Source="{Binding NextLaunch.links.patch.small, TargetNullValue='https://i.imgur.com/oRVFFH2.png'}"/>
+                <Grid Grid.Row="0"
+                      Grid.Column="1"
+                      RowDefinitions="auto, auto, auto, auto"
+                      ColumnDefinitions="auto"
+                      VerticalOptions="Center"
+                      Margin="20,0,0,0">
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           FontSize="30"
+                           FontFamily="Bold"
+                           TextColor="White"
+                           Margin="0,0,0,10"
+                           Text="{Binding NextLaunch.name}"/>
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           Text="{Binding NextLaunch.date_local, StringFormat='{0:ddd, dd MMM yyyy}', TargetNullValue='not informed', FallbackValue='not informed'}"
+                           FontFamily="Medium"
+                           Margin="0,0,0,5"
+                           TextColor="White"/>
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           Text="upcoming"
+                           FontFamily="Medium"
+                           Margin="0,0,0,10"
+                           TextColor="White"/>
+                    <Frame Grid.Row="3"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           BackgroundColor="Transparent"
+                           WidthRequest="100"
+                           Padding="6,10">
+                        <Label Text="Watch the launch"
+                               FontFamily="Light"
+                               FontSize="12"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               TextColor="White"/>
+                    </Frame>
+                </Grid>
             </Grid>
+            <Label Grid.Row="3"
+                   Grid.Column="0"
+                   FontFamily="Light"
+                   TextColor="#adb5bd"
+                   Margin="0,30,0,20"
+                   Text="latest launch"/>
+            <Grid Grid.Row="4"
+                  Grid.Column="0"
+                  RowDefinitions="auto"
+                  ColumnDefinitions="auto, *">
+                <Image Grid.Row="0"
+                       Grid.Column="0"
+                       WidthRequest="120"
+                       HeightRequest="120"
+                       Source="{Binding LatestLaunch.links.patch.small, TargetNullValue='https://i.imgur.com/oRVFFH2.png'}"/>
+                <Grid Grid.Row="0"
+                      Grid.Column="1"
+                      RowDefinitions="auto, auto, auto, auto"
+                      ColumnDefinitions="auto"
+                      Margin="20,0,0,0">
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           FontFamily="Bold"
+                           TextColor="White"
+                           Margin="0,0,0,10"
+                           FontSize="30"
+                           Text="{Binding LatestLaunch.name}"/>
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           FontFamily="Medium"
+                           Margin="0,0,0,5"
+                           TextColor="White"
+                           Text="{Binding LatestLaunch.date_local, StringFormat='{0:ddd, dd MMM yyyy}', TargetNullValue='not informed', FallbackValue='not informed'}" />
+                    <Label Grid.Row="2"
+                           Grid.Column="0"
+                           FontFamily="Medium"
+                           Margin="0,0,0,10"
+                           TextColor="Green"
+                           Text="success"/>
+                    <Frame Grid.Row="3"
+                           Grid.Column="0"
+                           HorizontalOptions="Start"
+                           BackgroundColor="Transparent"
+                           WidthRequest="100"
+                           Padding="6,10">
+                        <Label Text="Watch the launch"
+                               FontFamily="Light"
+                               FontSize="12"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               TextColor="White"/>
+                    </Frame>
+                </Grid>
+            </Grid>
+            <Label Grid.Row="5"
+                   Grid.Column="0"
+                   FontFamily="Light"
+                   TextColor="#adb5bd"
+                   Margin="0,30,0,20"
+                   Text="Tesla Roadster status"/>
         </Grid>
-    </Grid>
+    </ScrollView>
 </ContentPage>

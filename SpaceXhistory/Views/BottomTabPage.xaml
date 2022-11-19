@@ -4,19 +4,23 @@
             xmlns:local="clr-namespace:SpaceXhistory.Views"
             x:Class="SpaceXhistory.Views.BottomTabPage"
             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
-            android:TabbedPage.ToolbarPlacement="Bottom">
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="Black">
 
-    <NavigationPage Title="Home">
+    <NavigationPage Title="Home"
+                    IconImageSource="base">
         <x:Arguments>
             <local:HomePage/>
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="next launchs">
+    <NavigationPage Title="next launchs"
+                    IconImageSource="ship">
         <x:Arguments>
             <local:UpcomingLaunchesPage/>
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="latest launchs">
+    <NavigationPage Title="latest launchs"
+                    IconImageSource="cap">
         <x:Arguments>
             <local:PastLaunchesPage/>
         </x:Arguments>
