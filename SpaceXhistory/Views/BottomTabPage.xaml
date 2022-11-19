@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:SpaceXhistory.Views"
+            x:Class="SpaceXhistory.Views.BottomTabPage"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+
+    <NavigationPage Title="Home">
+        <x:Arguments>
+            <local:HomePage Title="Home" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Upcoming">
+        <x:Arguments>
+            <local:UpcomingLaunchesPage Title="Upcoming"/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Released">
+        <x:Arguments>
+            <local:PastLaunchesPage Title="Released"/>
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

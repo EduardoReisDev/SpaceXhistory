@@ -56,8 +56,29 @@
 	<ItemGroup>
 	  <None Remove="Models\" />
 	  <None Remove="Newtonsoft.Json" />
+	  <None Remove="Views\" />
+	  <None Remove="Resources\Images\botao-de-inicio.png" />
+	  <None Remove="ViewModels\" />
+	  <None Remove="Helpers\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
+	  <Folder Include="Views\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Helpers\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiXaml Update="Views\HomePage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\UpcomingLaunchesPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\PastLaunchesPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BottomTabPage.xaml">
+	    <SubType></SubType>
+	  </MauiXaml>
 	</ItemGroup>
 </Project>
