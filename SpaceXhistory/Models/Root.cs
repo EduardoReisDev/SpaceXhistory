@@ -25,7 +25,7 @@ namespace SpaceXhistory.Models
         public DateTime date_local { get; set; }
         public string date_precision { get; set; }
         public bool upcoming { get; set; }
-        public List<Core> cores { get; set; }
+        //public List<Core> cores { get; set; }
         public bool auto_update { get; set; }
         public bool tbd { get; set; }
         public string launch_library_id { get; set; }

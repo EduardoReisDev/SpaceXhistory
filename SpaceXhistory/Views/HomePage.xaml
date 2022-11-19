@@ -30,7 +30,7 @@
                        Grid.Column="0"
                        HeightRequest="120"
                        WidthRequest="120"
-                       Source="{Binding NextLaunch.links.patch.small, TargetNullValue='https://i.imgur.com/oRVFFH2.png'}"/>
+                       Source="{Binding NextLaunch.links.patch.small, TargetNullValue='https://i.imgur.com/8pgWyf4.png'}"/>
                 <Grid Grid.Row="0"
                       Grid.Column="1"
                       RowDefinitions="auto, auto, auto, auto"
@@ -55,7 +55,7 @@
                            Text="upcoming"
                            FontFamily="Medium"
                            Margin="0,0,0,10"
-                           TextColor="White"/>
+                           TextColor="DeepSkyBlue"/>
                     <Frame Grid.Row="3"
                            Grid.Column="0"
                            HorizontalOptions="Start"
@@ -93,7 +93,7 @@
                        Grid.Column="0"
                        WidthRequest="120"
                        HeightRequest="120"
-                       Source="{Binding LatestLaunch.links.patch.small, TargetNullValue='https://i.imgur.com/oRVFFH2.png'}"/>
+                       Source="{Binding LatestLaunch.links.patch.small, TargetNullValue='https://i.imgur.com/8pgWyf4.png'}"/>
                 <Grid Grid.Row="0"
                       Grid.Column="1"
                       RowDefinitions="auto, auto, auto, auto"
