@@ -16,7 +16,19 @@
  
  ## Architecture
  
+ .NET MAUI unifies Android, iOS, macOS, and Windows APIs into a single API that allows a write-once run-anywhere developer experience, while additionally providing deep access to every aspect of each native platform.
+ 
+ .NET MAUI provides a single framework for building the UIs for mobile and desktop apps. The following diagram shows a high-level view of the architecture of a .NET MAUI app:
+ 
  ![2021-10-06-19-12-58](https://user-images.githubusercontent.com/52722526/202879168-0cdf7e84-8959-4234-b528-63956a459b26.png)
+ 
+ In a .NET MAUI app, you write code that primarily interacts with the .NET MAUI API (1). .NET MAUI then directly consumes the native platform APIs (3). In addition, app code may directly exercise platform APIs (2), if required.
+ 
+  #### MVVM Pattern
+  
+The MVVM pattern helps to cleanly separate an application's business logic and presentation from its user interface (UI). Maintaining a clean separation between application logic and user interface helps resolve numerous development issues and makes an application easier to test, maintain, and evolve. It can also significantly improve code reuse opportunities and allow developers and UI designers to more easily collaborate in the development of their respective parts of an application.
+
+![mvvm-pattern](https://user-images.githubusercontent.com/52722526/202914348-8cdaa5d1-9495-4eaa-978a-5da384c55085.png)
 
  ## Consumed API
  - https://github.com/r-spacex/SpaceX-API
