@@ -17,13 +17,17 @@ public partial class PastLaunchesPage : ContentPage
         _viewModel.PopulateLatestLaunchs();
     }
 
-    private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
+    private async void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
     {
-        Root launch = e.Item as Root;
+        if (e.Item is not Root launch || string.IsNullOrEmpty(launch.links.webcast))
+        {
+            await DisplayAlert(string.Empty, "This release does not yet have a video.", "Ok");
+            return;
+        }
 
         try
         {
-            Uri uri = new Uri(launch.links.webcast);
+            Uri uri = new(launch.links.webcast);
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
         catch (Exception ex)

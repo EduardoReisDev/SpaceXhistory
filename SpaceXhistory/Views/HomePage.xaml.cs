@@ -1,5 +1,4 @@
 ﻿using SpaceXhistory.ViewModels;
-using SpaceXhistory.Models;
 
 namespace SpaceXhistory.Views;
 
@@ -41,9 +40,15 @@ public partial class HomePage : ContentPage
 
 	private async void OpenUrl(string link)
 	{
+        if (string.IsNullOrEmpty(link))
+        {
+            await DisplayAlert(string.Empty, "This release does not yet have a video.", "Ok");
+            return;
+        }
+
         try
         {
-            Uri uri = new Uri(link);
+            Uri uri = new(link);
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
         catch (Exception ex)
