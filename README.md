@@ -1,6 +1,8 @@
 # SpaceX History
  Application developed in .NET MAUI version: 7.0.100 (iOS and Android) consuming REST API. :ringed_planet: :rocket:
  
+ ![iPhone 13 Pro](https://user-images.githubusercontent.com/52722526/202879329-a30d1bab-fa09-41aa-9371-a4907f4519fb.png)
+ 
 ## Getting Started in .NET MAUI ##
 
 * [Install .NET MAUI](https://dot.net/maui)
