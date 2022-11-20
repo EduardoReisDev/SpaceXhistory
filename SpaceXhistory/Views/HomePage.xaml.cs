@@ -13,16 +13,11 @@ public partial class HomePage : ContentPage
 
 		_viewModel = new HomePageViewModel();
 		BindingContext = _viewModel;
-	}
 
-	protected override void OnAppearing()
-	{
-		base.OnAppearing();
-
-		_viewModel.GetNextLaunch();
-		_viewModel.GetLatestLaunch();
-		_viewModel.GetRoadsterInfo();
-	}
+        _viewModel.GetNextLaunch();
+        _viewModel.GetLatestLaunch();
+        _viewModel.GetRoadsterInfo();
+    }
 
 	private void NextLaunchWebcastTap(object sender, TappedEventArgs e)
 	{

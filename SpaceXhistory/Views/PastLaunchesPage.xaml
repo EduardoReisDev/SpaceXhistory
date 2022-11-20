@@ -9,11 +9,11 @@
               BackgroundColor="Black"
               HasUnevenRows="True"
               ItemTapped="ListView_ItemTapped"
-              SeparatorVisibility="None">
+              SeparatorVisibility="None"
+              Margin="20">
         <ListView.Header>
             <Grid RowDefinitions="auto, auto"
-                  ColumnDefinitions="auto"
-                  Margin="20">
+                  ColumnDefinitions="auto">
                 <Image Grid.Row="0"
                        Grid.Column="0"
                        Margin="0"

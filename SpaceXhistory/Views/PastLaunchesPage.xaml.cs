@@ -13,13 +13,8 @@ public partial class PastLaunchesPage : ContentPage
 
 		_viewModel = new PastLaunchesViewModel();
 		BindingContext = _viewModel;
-    }
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-		_viewModel.PopulateLatestLaunchs();
+        _viewModel.PopulateLatestLaunchs();
     }
 
     private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)

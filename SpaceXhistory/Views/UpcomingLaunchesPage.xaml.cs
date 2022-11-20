@@ -13,13 +13,8 @@ public partial class UpcomingLaunchesPage : ContentPage
 
 		_viewModel = new UpcomingLaunchesViewModel();
 		BindingContext = _viewModel;
-	}
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-
-		_viewModel.PopulateNextLaunchs();
+        _viewModel.PopulateNextLaunchs();
     }
 
     private async void ListView_ItemTapped(Object sender, ItemTappedEventArgs e)
