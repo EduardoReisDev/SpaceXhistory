@@ -6,14 +6,28 @@
              BackgroundColor="Black">
 
     <ListView ItemsSource="{Binding NextLaunchs}"
+              ItemTapped="ListView_ItemTapped"
               BackgroundColor="Black"
               HasUnevenRows="True"
               SeparatorVisibility="None">
         <ListView.Header>
-            <Image Margin="20"
-                   WidthRequest="150"
-                   HeightRequest="40"
-                   Source="logo.png"/>
+            <Grid RowDefinitions="auto, auto"
+                  ColumnDefinitions="auto"
+                  Margin="20">
+                <Image Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0"
+                       WidthRequest="150"
+                       HeightRequest="40"
+                       HorizontalOptions="Start"
+                       Source="logo.png"/>
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Margin="0,20,0,0"
+                       Text="next launchs"
+                       FontFamily="Light"
+                       TextColor="#adb5bd"/>
+            </Grid>
         </ListView.Header>
         <ListView.ItemTemplate>
             <DataTemplate>
@@ -47,10 +61,10 @@
                                    TextColor="White"/>
                             <Label Grid.Row="2"
                                    Grid.Column="0"
-                                   Text="upcoming"
                                    FontFamily="Medium"
                                    Margin="0,0,0,10"
-                                   TextColor="DeepSkyBlue"/>
+                                   Text="{Binding Status}"
+                                   TextColor="{Binding StatusColor}"/>
                             <Frame Grid.Row="3"
                                    Grid.Column="0"
                                    HorizontalOptions="Start"

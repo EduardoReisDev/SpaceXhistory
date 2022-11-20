@@ -52,10 +52,10 @@
                            TextColor="White"/>
                     <Label Grid.Row="2"
                            Grid.Column="0"
-                           Text="upcoming"
+                           Text="{Binding NextLaunch.Status}"
+                           TextColor="{Binding NextLaunch.StatusColor}"
                            FontFamily="Medium"
-                           Margin="0,0,0,10"
-                           TextColor="DeepSkyBlue"/>
+                           Margin="0,0,0,10"/>
                     <Frame Grid.Row="3"
                            Grid.Column="0"
                            HorizontalOptions="Start"
@@ -116,8 +116,8 @@
                            Grid.Column="0"
                            FontFamily="Medium"
                            Margin="0,0,0,10"
-                           TextColor="Green"
-                           Text="success"/>
+                           Text="{Binding LatestLaunch.Status}"
+                           TextColor="{Binding LatestLaunch.StatusColor}"/>
                     <Frame Grid.Row="3"
                            Grid.Column="0"
                            HorizontalOptions="Start"
