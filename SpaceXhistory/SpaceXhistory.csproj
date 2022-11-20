@@ -55,6 +55,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="3.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -77,6 +78,7 @@
 	  <None Remove="Resources\Images\ship.svg" />
 	  <None Remove="Resources\Images\wiki.svg" />
 	  <None Remove="Resources\Images\youtube.svg" />
+	  <None Remove="CommunityToolkit.Maui" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Models\" />
