@@ -27,7 +27,7 @@
  - https://api.spacexdata.com/v4/roadster
  
  ## Result
- #### Image
+ #### Screenshot's
  ![Group 3](https://user-images.githubusercontent.com/52722526/202879198-159a908f-40ab-4e7b-a159-8f2d1cf605e2.png)
 
  #### Video
