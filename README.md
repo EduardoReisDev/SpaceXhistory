@@ -49,4 +49,6 @@ The MVVM pattern helps to cleanly separate an application's business logic and p
  #### Video
 https://user-images.githubusercontent.com/52722526/202878731-d4b98a5d-e1e3-47ec-9451-89c9d5ca0283.mp4
 
+Design based on: https://github.com/bedirhankaradogan/spacex-history
+
 ###### Obrigado!
