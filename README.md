@@ -1,5 +1,5 @@
 # SpaceX History
- Application developed in .NET MAUI version: 7.0.100 (iOS and Android) consuming REST API. :ringed_planet: :rocket:
+ Application developed in .NET MAUI version .NET 7 (iOS and Android) consuming REST API. :ringed_planet: :rocket:
  
  [![GitHub stars](https://img.shields.io/github/stars/EduardoReisDev/SpaceXhistory?style=flat-square)](https://github.com/naweed/MauiTubePlayer/stargazers) [![GitHub last-commit](https://img.shields.io/github/last-commit/EduardoReisDev/SpaceXhistory?style=flat-square)](https://github.com/jameslee214/maui-premierleague/commits)
  
