@@ -5,7 +5,7 @@
  
  [<img src="https://www.snppts.dev/img/snppts-badge.jpg" width="200px">](https://www.snppts.dev/snippet/spacex-history)
  
- ![iPhone 13 Pro](https://user-images.githubusercontent.com/52722526/202879329-a30d1bab-fa09-41aa-9371-a4907f4519fb.png)
+ <img src="https://user-images.githubusercontent.com/52722526/202879329-a30d1bab-fa09-41aa-9371-a4907f4519fb.png" width="650px">
  
 ## Getting Started in .NET MAUI ##
 
